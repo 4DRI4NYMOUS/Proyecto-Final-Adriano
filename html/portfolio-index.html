@@ -75,21 +75,22 @@
             </section>
             <section id="contacto">
                 <H2>Contacto</H2>
-                <p>Escribime en<a href="abc@hotmail.com.ar.lol"> gmail </a>o dejame un mensaje aca abajo</a></p>
-                <form>
+                <p>Escribime en <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=gmailwebdeprueba@gmail.com"
+                    target="_blank" rel="noopener noreferrer">Gmail</a> o dejame un mensaje aca abajo.</p>
+                <form id="form-contacto">
                     <fieldset>
                         <legend>Tus datos</legend>
                         <p>
                             <label for="nombreyapellido">Nombre y Apellido</label>
-                            <input type="text" id="nombreyapellido" placeholder="Alan Brito" required>
+                            <input type="text" id="nombreyapellido" name="nombre" placeholder="Alan Brito" required>
                         </p>
                         <p>
                             <label for="correo">Correo electronico</label>
-                            <input type="text" id="correo" placeholder="alanbrito@hotmail.com" required>
+                            <input type="email" id="correo" name="email" placeholder="alanbrito@hotmail.com" required>
                         </p>
                         <p>
                             <label for="telefono">Telefono</label>
-                            <input type="text" id="telefono" placeholder="387 5418718" required>
+                            <input type="tel" id="telefono" name="telefono" placeholder="3875418718" required>
                         </p>
                     </fieldset>
                     <fieldset>
@@ -97,15 +98,15 @@
                         <label for="asunto">Asunto</label>
                         <br>
                         <select name="asunto" id="asunto">
-                            <option value="trabrajo">Trabajo</option>
+                            <option value="trabajo">Trabajo</option>
                             <option value="consulta">Consulta</option>
                             <option value="negocio">Negocio</option>
                         </select>
                         <p>Por que medio quieres que te contacte?
                             <br>
-                            <input type="radio" id="por-correo" name="medio" value="mail" checked>
-                            <label for="por-mail">Por correo</label>
-                            <input type="radio" id="por-telefono" name="medio" value="telefono" checked>
+                            <input type="radio" id="por-correo" name="medio" value="correo" checked>
+                            <label for="por-correo">Por correo</label>
+                            <input type="radio" id="por-telefono" name="medio" value="telefono">
                             <label for="por-telefono">Por Telefono</label>
                         </p>
                         <p>
@@ -118,11 +119,15 @@
                             <input type="checkbox" id="novedades" name="check1">
                             <label for="novedades">Quiero recibir novedades</label>
                         </p>
+                        <button type="submit" id="btn-enviar">Enviar mensaje</button>
+                        <p id="estado-formulario" role="status" aria-live="polite"></p>
                     </fieldset>
                 </form>
             </section>
         </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="../js/contacto.js"></script>
     <footer>
         <p>copiright 2026 - Mi Portfolio </p>
     </footer>
